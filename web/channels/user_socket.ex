@@ -23,11 +23,9 @@ defmodule Limit.UserSocket do
     {:ok, assign(socket, :user, user)}
   end
 
-  def connect(params, socket) do
-    IO.inspect params
-    {:ok, socket}
+  def connect(_any, socket) do
+    {:ok, assign(socket, :user, "unknown")}
   end
-
 
   # Socket id's are topics that allow you to identify all sockets for a given user:
   #

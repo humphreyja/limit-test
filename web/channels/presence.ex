@@ -73,5 +73,6 @@ defmodule Limit.Presence do
   original presence data.
   """
   use Phoenix.Presence, otp_app: :limit,
-                        pubsub_server: Limit.PubSub
+                        pubsub_server: Limit.PubSub,
+                        log_level: :debug
 end
